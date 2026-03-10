@@ -1,0 +1,22 @@
+STRING BUFFER:
+--> String buffer is like a mutable string datatype.
+--> Eg: StringBuffer sb = new StringBuffer("Veena");
+Initially, the string buffer will have a capacity of 16 Bytes. When you add any data, it will give additional 16 byte storage.
+System.out.println(sb.capacity());
+--> We can convert stringbuffer to string ith toString() METHOD
+
+Difference b/w StringBUffer and StringBuilder:
+StringBuffer: tread safe, StringBuiler: is not tread safe.
+Same methods and everything.
+
+--> Variables inside a method are known as "loacl variblr".
+--> Variables created inside class are known as "Instance variables".
+
+STATIC KEYWORD:
+
+--> Static variables are shared by all instances(objects). If an object chages a static variable, then it will affect the other objects as well. Static variables should be reffered using class name and not by obj name(not recommended, but doable). Thease variables are basically belongs to class and not to othe object.
+--> Inside non-static method we can use ststic variables, there is no harm.
+--> We can initialise the instance and static variables inside a constructor, but initialising static variables everytime we create an object is not optimal and recommended. So for such scenarios, We have a special static block where we can use to initialise static variables. This block will be called only once, unlike constructor.
+--> First the class loads and then the obj gets instantiated. When the class is loaded, the static block executes. SO, everytime we load a class the sttaic block loads. But, the class will load only if any obj is created. To acheive class loading w/o obj creation, it can be one by "Class" class in java. Class.forName("##classname##"). So if we do this, the class loads and the static bloack executes.
+
+
