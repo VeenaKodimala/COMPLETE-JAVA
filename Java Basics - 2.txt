@@ -1,3 +1,11 @@
+STRING::
+--> If we have s1="veena", s2="veena, both the variables will refer to the same address. Whenever a new string variable is created, it will check the string constant pool, present in hash memo to check if we have already an obj with that value. If there, it will point to same address. I f not create a new one.
+
+--> If I change "s1", from veena to Kodimala, then it will create an new object with "Kodimala", it will not change or overwrite the existing obj. veena will go for garbage collection. This behaviour is known as "Immutability".
+
+--> To overcome this immutability, we have String Builder and String Buffer.
+
+
 STRING BUFFER:
 --> String buffer is like a mutable string datatype.
 --> Eg: StringBuffer sb = new StringBuffer("Veena");

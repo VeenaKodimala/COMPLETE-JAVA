@@ -1,21 +1,25 @@
 package OOPS;
 
 class DataFrame{
-private String Name;
-    private int Age;
+private String name;
+    private int age;
 
    public void setName(String name) {
-        Name =  name;
+        this.name =  name;
     }
     public String getName() {
-        return Name;
+        return name;
     }
 
      public void setAge(int age) {
-        Age = age;
+        //what if we have to use same same? if we have same name, 
+        // then it will consider it as locan variable.
+        //that's when we use this, "this" keyword repesent the
+        //currnet obj that is calling this method.
+        this.age = age;
     }
     public int getAge() {
-        return Age;
+        return age;
     }
 
 }
