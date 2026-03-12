@@ -18,5 +18,8 @@ STATIC KEYWORD:
 --> Inside non-static method we can use ststic variables, there is no harm.
 --> We can initialise the instance and static variables inside a constructor, but initialising static variables everytime we create an object is not optimal and recommended. So for such scenarios, We have a special static block where we can use to initialise static variables. This block will be called only once, unlike constructor.
 --> First the class loads and then the obj gets instantiated. When the class is loaded, the static block executes. SO, everytime we load a class the sttaic block loads. But, the class will load only if any obj is created. To acheive class loading w/o obj creation, it can be one by "Class" class in java. Class.forName("##classname##"). So if we do this, the class loads and the static bloack executes.
+--> When you want to call or use any non-static method, we need to create an object to use it. We cannot call a non-static method directly with Class name.
+--> We can use static variable inside a static method, but we cannot use non-static var inside a static method. To access a nn-static method inside a static method, u need to pass the obj to that method as a parameter.
+
 
 
