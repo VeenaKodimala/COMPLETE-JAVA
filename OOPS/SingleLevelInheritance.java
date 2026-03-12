@@ -37,8 +37,18 @@ class B extends A{
     }
 }
 
-public class Inheritance {
+
+
+
+
+
+public class SingleLevelInheritance {
     public static void main(String[] args) {
         B b = new B(5);
+
+        
+
+
+
     }
 }
