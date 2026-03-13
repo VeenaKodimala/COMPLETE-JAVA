@@ -51,3 +51,13 @@ public class MultiLeveInheritance {
         System.out.println("Reminder of 10 and 3 is:: "+c.rem(10, 3));
     }
 }
+
+/*Why multiple inheritance will not work?
+like a child extending two parent classes.
+
+If we have a method called show() in both A and B paremt classes imported by C(child)
+java doen't know which method to call. It is an ambiguity problem. So in java
+multiple inheritance is not supported. It is indirectly satisfied by
+"Interfaces" in later versions of java
+
+*/

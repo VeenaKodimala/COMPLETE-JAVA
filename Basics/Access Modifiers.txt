@@ -1,0 +1,11 @@
+1. Public= Any variable or method can be access from anywhere.
+
+2. If a variable is not marked anything then, it will only be accessible only in same package.
+ If nothing is marked, it is marked with "default" access modifier. Which basically mean 
+ it can be accessed only in same package.
+3. If a variable pr method is marked "Private", it can be accessed from only the same class.
+4. If a variable is marked 
+
+
+
+
