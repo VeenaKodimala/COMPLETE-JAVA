@@ -4,8 +4,17 @@
  If nothing is marked, it is marked with "default" access modifier. Which basically mean 
  it can be accessed only in same package.
 3. If a variable pr method is marked "Private", it can be accessed from only the same class.
-4. If a variable is marked 
 
 
+Access Level      | Same Class | Same Package Subclass | Same Package Non-Subclass | Different Package Subclass | Different Package Non-Subclass
+------------------------------------------------------------------------------------------------------------------------------------------------
+Private           | Yes        | No                    | No                        | No                         | No
+Protected         | Yes        | Yes                   | Yes                       | Yes                        | No
+Public            | Yes        | Yes                   | Yes                       | Yes                        | Yes
+Default (Package) | Yes        | Yes                   | Yes                       | No                         | No
 
 
+--> classes has to be public
+--> instance variables - private
+--> method - mostly public
+--> Do not use default, it is not recommended.
