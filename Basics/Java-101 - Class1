@@ -1,0 +1,7 @@
+--> In java 9 "jshel" has been introduced, it is lke python shell scripting.`We just type jshell in cmd, and tghe cmd enters into a scripting mode, where we can simply add w onumbers, print etc.
+--> Our javacode is independent, but jvm itself is not independent. We have seperate setup for IOS.
+--> Java will always start from "main()" method with a particular signature(public static void main(String args[])).
+--> JRE is usually present inside JRE. Which will provide the extra library dependencies to JVM while running the code.
+--> In my sys, I have writte n a java code and compiled it, i will get a className.class file. Now if we want this file to run in my friends machine, it is ok even if my friend's machine has only JRE and JDK, because JDK will usually have compiler + JRE in it. Since we compiled the java file, we don't need it further.
+--> Java is a strongly typed programming language. This means it enforces strict rules regarding data types and does not allow implicit conversions between incompatible types, which helps catch errors at compile time and prevents many runtime issues.
+
