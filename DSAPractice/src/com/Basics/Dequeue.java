@@ -114,7 +114,7 @@ public class Dequeue {
             } else{
                 rear = rear + 1;
             }
-            deq  ueue[rear] = data;
+            dequeue[rear] = data;
         } catch (Exception e) {
             System.out.println("Exception in enqueueAtFront:: " + e);
         }
@@ -126,7 +126,7 @@ public class Dequeue {
                     System.out.println("Queue is empty");
                     return -1;
                 } else {
-                    int data = queue[front];
+                    int data = dequeue[front];
 
                     if (rear == front) {
                         front = -1;
@@ -184,7 +184,7 @@ public class Dequeue {
                     return -1;
                 }
 
-                int data = queue[front];
+                int data = dequeue[front];
                 return data;
 
             } catch (Exception e) {
@@ -206,14 +206,14 @@ public class Dequeue {
                     //System.out.println("rear:: " + rear);
                     System.out.println("Queue:: ");
                     for (temp = front; temp <= rear; temp++) {
-                        System.out.println(queue[temp] + " ");
+                        System.out.println(dequeue[temp] + " ");
                     }
                 } else {
                     for(temp = front ;temp<=MAX-1;temp++){
-                        System.out.println(queue[temp] + " ");
+                        System.out.println(dequeue[temp] + " ");
                     }
                     for(temp=0;temp<=rear;temp++){
-                        System.out.println(queue[temp] + " ");
+                        System.out.println(dequeue[temp] + " ");
                     }
 
                 }

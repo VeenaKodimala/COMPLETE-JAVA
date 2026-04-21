@@ -12,8 +12,8 @@ private String name;
     }
 
      public void setAge(int age) {
-        //what if we have to use same same? if we have same name, 
-        // then it will consider it as locan variable.
+        //what if we have to use same name? if we have same name, 
+        // then it will consider it as local variable.
         //that's when we use this, "this" keyword repesent the
         //currnet obj that is calling this method.
         this.age = age;
