@@ -1,0 +1,6 @@
+What if you want to change a variable from one type to another????
+-->There are two types here Type casting and type conversion.
+-->Type casting: It will be done explicitly by the developer. Usually this is done when we want to convert a bigger datatype to a lower one. Eg: int to byte, float to int etc. May lead to data loss or truncation. Works only with compatible types.
+--> We know taht the range of byte is 127(-128 to 128 signed bits). Now when we cast 257 integer to a byte, it is out of range rihght. So, what it does is 257 % 256(one byte)=1, so 1 will the output when we cast 257 int to byte. This is the procedure that it used for int > 127
+-->Type conversion: This will automatically taken care by java compiler. It is basically converting smaller data type to larger. Eg: byte to int, int to float. No data loss. Works with both compatible and non-compatible types.
+Type Promotion is another type where the lower datatype is promoted to higher, to perform expressions. Eg: byte a=10. c = b*2. Now b will be promoted to int as 2 is an int, later the operation is performed.

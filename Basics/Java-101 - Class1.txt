@@ -6,4 +6,7 @@
 --> Java is a strongly typed programming language. This means it enforces strict rules regarding data types and does not allow implicit conversions between incompatible types, which helps catch errors at compile time and prevents many runtime issues.
 --> If you know how many iterations to run : For loop
 --> For file read like to end at end of file correctly: while loop
--->If something has to executed by default, and later the same has to be executed based on a condition: do-while loop. 
+-->If something has to executed by default, and later the same has to be executed based on a condition: do-while loop. --> When saving a number in long, we should always end the number with l. Eg: long a = 200l
+--> When you get confused about no.of zeroes in a number, in java, we can seperate them using "_" E: int a = 100_00_00_000
+--> Post increment Vs Pre increment - Both does the same, but when we assign the operation's value to a variable, then we will find the difference. int b = ++a, will first increment a and assign the incremented value to b.int b = a++, but here first assignement will happen then only increment.
+Calc c = new Calc, c is a reference variable. Now the c will be present in stack. When we do new Calc, the obj will be created in heap, with it's reference stored in c(in stack).
