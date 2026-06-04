@@ -10,3 +10,5 @@
 --> When you get confused about no.of zeroes in a number, in java, we can seperate them using "_" E: int a = 100_00_00_000
 --> Post increment Vs Pre increment - Both does the same, but when we assign the operation's value to a variable, then we will find the difference. int b = ++a, will first increment a and assign the incremented value to b.int b = a++, but here first assignement will happen then only increment.
 Calc c = new Calc, c is a reference variable. Now the c will be present in stack. When we do new Calc, the obj will be created in heap, with it's reference stored in c(in stack).
+
+java --source 11 JavaConstructors.java - This is the way of running the java file directly, where the compilation happens in the memory.
