@@ -22,6 +22,7 @@ public class Polymorphism {
 
         System.out.println("a+b = "+cal.add(a,b));
         System.out.println("a+c = "+cal.add(c,a));
+        //below is the example of method overloading, where the same method name is used with different parameters.
         System.out.println("a+b+c = "+cal.add(a,b,c));
 
     }

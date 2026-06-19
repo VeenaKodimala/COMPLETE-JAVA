@@ -21,34 +21,40 @@ class A{
      public A(int a){
         System.out.println("Constructor of A with int parameter: " + a);
     }
+
+    public int sum2Nums(int n, int m){
+        return n+m;
+
+    }
 }
 
 class B extends A{
     public B(){
+        //super() will by default be called here, even if we don't write it. It will call the default constructor of A.
         super();
         System.out.println("Constructor of B");
     }
 
     public B(int i){
-        //this(7); - Not possible because you are calling the same constructor as the current one.
-        //This will call the constructor of the same class, i mean the non-parameterised one.
-        this();
+        //we are explicitly calling the parameterized constructor of the parent class, by passing the parameter.
+        super(i);
         System.out.println("Constructor of B with int parameter: " + i);
     }
+
+    
+    public int sum2Nums(int n, int m){
+        return n+m+1;
+
+    }
 }
-
-
-
-
-
 
 public class SingleLevelInheritance {
     public static void main(String[] args) {
         B b = new B(5);
 
-        
-
-
+        //Below, method overriding is demonstrated. Where the child's method is overriding the parent method.
+        int result = b.sum2Nums(3, 4);
+        System.out.println("Sum of 3 and 4 using B's method: " + result);
 
     }
 }
