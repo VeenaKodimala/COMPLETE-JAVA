@@ -28,7 +28,7 @@ public class finalKeyword {
     // This will cause a compilation error because Calc is a final class and cannot be extended. So we are stopping the inheritance of a final class.
 //}
 
-public class AdvCalc extends Calc{
+class AdvCalc extends Calc{
     //usually, when we want to prevent method overriding, we can make the method final. This will prevent the child class from overriding the parent method.
      public void square(int num){
             System.out.println("Square of " + num + " is: " + (num * num) +" in class AdvCalc");

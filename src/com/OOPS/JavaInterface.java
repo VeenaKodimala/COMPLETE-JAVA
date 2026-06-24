@@ -6,6 +6,9 @@ By default, the methods in an interface are abstract and public.
 We cannot create an instance of an interface .
 Interfaces just lay an outline of methods that a class must implement, but do not actually provide any implementation themselves. 
 In we implement an interface, then by default, we need to provide implementation for all the methods declared in the interface. If not, then the class implementing the interface must be declared as abstract.
+
+We can extend an interface from another interface, and the child interface will inherit all the methods of the parent interface. Even if we do not provide implementation for the methods of the parent interface in the child interface, then the class implementing the child interface must provide implementation for all the methods of both parent and child interfaces.
+
 */
 
 //This will automatically be a private interface, which will only be accessed by the classes inside same package.
@@ -45,6 +48,12 @@ public class JavaInterface {
         ci.signOff();
         System.out.println("value of a in DemoInterface: "+DemoInterface.a);
         System.out.println("value of b in DemoInterface: "+DemoInterface.b);
+
+        //we cannot do the below because, we have created reference for Interface DemoInterface, not for AnotherInterface.So we cannot call the methods of AnotherInterface interface.
+        //ci.display();
+        AnotherInterface ai = new ChildImpl();
+        ai.display();
+
         
     }
 }

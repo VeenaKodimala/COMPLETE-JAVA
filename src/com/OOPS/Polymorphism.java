@@ -1,5 +1,7 @@
 package com.OOPS;
 
+//overloading cannot be achieved by changing the return type of the method. The return type of the method can be same or different, but it cannot be used to differentiate between overloaded methods. The compiler will throw an error if we try to overload a method by changing the return type only.
+
 class Calc{
     public int add(int a,int b){
         return a+b;

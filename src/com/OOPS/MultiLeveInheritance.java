@@ -58,8 +58,8 @@ public class MultiLeveInheritance {
 like a child extending two parent classes.
 
 If we have a method called show() in both A and B paremt classes imported by C(child)
-java doen't know which method to call. It is an ambiguity problem. So in java
+java doen't know which method to call. This is known as a Diamond Problem. It is an ambiguity problem. So in java
 multiple inheritance is not supported. It is indirectly satisfied by
-"Interfaces" in later versions of java
-
+"Interfaces" in later versions of java. In Interfaces, since we only give the method definition, the implementation will be proprietory to the class implementing the interface. So there will not be any ambiguity.
+There is another type of Inheritance, called as "Hybrid Inheritance", which is a combination of both single inheritance and multiple inheritance. 
 */

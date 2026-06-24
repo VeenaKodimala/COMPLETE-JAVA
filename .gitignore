@@ -1,0 +1,6 @@
+# Environment variables
+.env
+#.env folder
+.venv
+#.class files
+.class
