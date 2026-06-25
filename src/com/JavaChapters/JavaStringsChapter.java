@@ -12,6 +12,23 @@ public class JavaStringsChapter{
        StringBufferExample sb = new StringBufferExample();
        sb.strBuffer();
 
+       /*
+       ----------------------INTERN() METHOD----------------------   
+       Intern() method does this: Go to the String Pool. If this string already exists there, return its reference. Otherwise, add it to the pool and return that reference.
+       That is how in below, s2 and s3 are equal.
+       */
+      System.out.println("INTERN() METHOD IN STRINGS");
+
+       String s1 = new String("Hello");
+       String s2 = "Hello";
+
+       String s3 = s1.intern();
+
+
+       System.out.println("s1 equals s2:: "+ (s1 == s2));
+       System.out.println("s2 == s3:: "+ (s2 == s3));
+       System.out.println("s3 == \"Hello\"::: " + (s3 == "Hello"));
+
     }
 
     /** String Buffer: It is a mutable sequence of characters. Unlike strings, string buffers can be modified after they are created.
@@ -50,3 +67,10 @@ class StringBufferExample {
 }
 
 //StringBuilder is similar to StringBuffer but it is not thread-safe, which means it is not synchronized. It is faster than StringBuffer because it does not have the overhead of synchronization. StringBuilder should be used when there is no need for thread safety, while StringBuffer should be used when thread safety is required.
+
+/*String Hashcode concept::: This concept is used to generate a unique integer value for each string object based on its content. The hashcode is used in hash-based collections like HashMap, HashSet, etc. If two strings have the same content, they will have the same hashcode, even if they are different objects.
+Now not only two objs with same content will have same hashcode, but also two different objects with different content can have same hashcode. This is called hash collision. In case of hash collision, the equals() method is used to compare the actual content of the objects to determine if they are equal or not. 
+In hash-based collections, when the hashcode returns same values, then it will check the equals() method to check if the objects are equal or not. If they are equal, then it will consider them as same object and will not add the new object to the collection. If they are not equal, then it will consider them as different objects and will add the new object to the collection. Because, hash collections will not allow duplicate objects to be added to the collection.                 
+*/
+
+

@@ -9,63 +9,65 @@ public class CircularQueueArray {
     int front = -1, rear = -1;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        CircularQueueArray cqa = new CircularQueueArray();
-        int choice;
-        do {
-            System.out.println("1. Insert an element in queue");
-            System.out.println("2. Delete an element in queue");
-            System.out.println("3. Print all elements in queue");
-            System.out.println("4. Print first element in queue");
-            System.out.println("5. Exit");
-            System.out.println("Enter your choice");
-            choice = sc.nextInt();
-            /* when i call a non-static method from a non-static method from a
-             * ststic method, it will throw and error stating,
-             *  i cannot call a non-static method from static method.
-             * but when i create an object and call it,
-             * there will be no error. why and what's the difference? -
-             * this is because, non-static method: tied to object
-             * of the clss, but static method, tied to class,
-             * no object is needed. */
-            cqa.mainMenu(choice);
-        } while (choice < 5);
+        try (Scanner sc = new Scanner(System.in)) {
+            CircularQueueArray cqa = new CircularQueueArray();
+            int choice;
+            do {
+                System.out.println("1. Insert an element in queue");
+                System.out.println("2. Delete an element in queue");
+                System.out.println("3. Print all elements in queue");
+                System.out.println("4. Print first element in queue");
+                System.out.println("5. Exit");
+                System.out.println("Enter your choice");
+                choice = sc.nextInt();
+                /* when i call a non-static method from a non-static method from a
+                 * ststic method, it will throw and error stating,
+                 *  i cannot call a non-static method from static method.
+                 * but when i create an object and call it,
+                 * there will be no error. why and what's the difference? -
+                 * this is because, non-static method: tied to object
+                 * of the clss, but static method, tied to class,
+                 * no object is needed. */
+                cqa.mainMenu(choice);
+            } while (choice < 5);
+        }
     }
 
     public void mainMenu(int choice) {
         try {
-            Scanner sc = new Scanner(System.in);
-            switch (choice) {
-                case 1: {
-                    System.out.println("Enter the data to" +
-                            " insert in queue");
-                    int data = sc.nextInt();
-                    enqueue(data);
-                    print();
-                    break;
-                }
-                case 2: {
-                    int data = dequeue();
-                    System.out.println("The deleted data is: " + data);
-                    print();
-                    break;
-                }
-                case 3: {
-                    print();
-                    break;
-                }
-                case 4: {
-                    int data = peek();
-                    System.out.println("The first element of queue:: " + data);
-                    break;
+            try (Scanner sc = new Scanner(System.in)) {
+                switch (choice) {
+                    case 1: {
+                        System.out.println("Enter the data to" +
+                                " insert in queue");
+                        int data = sc.nextInt();
+                        enqueue(data);
+                        print();
+                        break;
+                    }
+                    case 2: {
+                        int data = dequeue();
+                        System.out.println("The deleted data is: " + data);
+                        print();
+                        break;
+                    }
+                    case 3: {
+                        print();
+                        break;
+                    }
+                    case 4: {
+                        int data = peek();
+                        System.out.println("The first element of queue:: " + data);
+                        break;
 
+                    }
+                    case 5: {
+                        System.out.println("Exiting...");
+                        break;
+                    }
+                    default:
+                        System.out.println("Default case: wrong choice");
                 }
-                case 5: {
-                    System.out.println("Exiting...");
-                    break;
-                }
-                default:
-                    System.out.println("Default case: wrong choice");
             }
         } catch (Exception e) {
             System.out.println("Exception in mainMenu:: " + e);
