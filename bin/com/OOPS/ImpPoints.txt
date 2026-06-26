@@ -1,2 +1,0 @@
-- When a class implements an interface and extends a class, if both of then have same method name, then the method of super calss will have priority over the method of interface. 
-- This is because the class hierarchy takes precedence over the interface hierarchy in Java.

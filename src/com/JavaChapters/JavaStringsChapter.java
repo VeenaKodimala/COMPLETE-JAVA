@@ -1,5 +1,6 @@
 package com.JavaChapters;
 
+
 /* String constant Pool:
 This is the pool where all the strings created will be stored. Here, if we create a string using double quotes, it will be stored in the string constant pool. If we create a string using the new keyword, it will be stored in the heap memory. If we create a string using the new keyword and then intern it(Eg: String s1 = new String("hello").intern(); // now points to pool
 ), it will be stored in the string constant pool. The string constant pool is a special area of memory that is used to store string literals. When a string literal is created, it is added to the string constant pool. If a string literal already exists in the pool, then a reference to that string is returned instead of creating a new string object. This helps to save memory and improve performance. Now if an existing reference id modified with new value, then it will create a new string object in the string constant pool and the reference will point to that new string object. If we create a string using the new keyword, it will always create a new string object in the heap memory, even if the same string already exists in the string constant pool. This is because the new keyword creates a new object in memory, regardless of whether an identical string already exists in the pool or not.
