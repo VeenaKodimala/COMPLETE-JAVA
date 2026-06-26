@@ -22,7 +22,7 @@ public class OccuranceCount {
             }
             System.out.println("count:: " + count);
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Error::: "+e);
         }
     }
 

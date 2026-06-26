@@ -7,19 +7,20 @@ public class SinglyLinkedList {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        SinglyLinkedList sll = new SinglyLinkedList();
-        int choice;
-        do {
-            System.out.println("Enter your choice:");
-            System.out.println("1. Create an Singly linked list");
-            System.out.println("2. Insert a node at the beginning");
-            System.out.println("3. Insert a node at the end");
-            System.out.println("4. Insert a node at an index");
-            System.out.println("5. Exit");
-            choice = sc.nextInt();
-            sll.mainMenu(choice);
-        } while (choice != 5);
+        try (Scanner sc = new Scanner(System.in)) {
+            SinglyLinkedList sll = new SinglyLinkedList();
+            int choice;
+            do {
+                System.out.println("Enter your choice:");
+                System.out.println("1. Create an Singly linked list");
+                System.out.println("2. Insert a node at the beginning");
+                System.out.println("3. Insert a node at the end");
+                System.out.println("4. Insert a node at an index");
+                System.out.println("5. Exit");
+                choice = sc.nextInt();
+                sll.mainMenu(choice);
+            } while (choice != 5);
+        }
 
 
     }
@@ -125,46 +126,47 @@ public class SinglyLinkedList {
 
     public void mainMenu(int choice) {
         try {
-            Scanner sc = new Scanner(System.in);
-            switch (choice) {
-                case 1: {
-                    System.out.println("Enter the data to create Singly linked list::");
-                    int data = sc.nextInt();
-                    createSLL(data);
-                    printSLL();
-                    break;
-                }
-                case 2: {
-                    System.out.println("Enter the data to insert at beginning of Singly linked list::");
-                    int data = sc.nextInt();
-                    addAtBeginning(data);
-                    printSLL();
-                    break;
-                }
-                case 3: {
-                    System.out.println("Enter the data to insert at end of Singly linked list::");
-                    int data = sc.nextInt();
-                    addAtEnd(data);
-                    printSLL();
-                    break;
-                }
-                case 4: {
-                    System.out.println("Enter at which position to add the new node:");
-                    int pos = sc.nextInt();
-                    System.out.println("Enter at data to insert:");
-                    int data = sc.nextInt();
-                    int sllSize = computeSLLSize();
-                    addatPos(pos, data, sllSize);
-                    printSLL();
-                }
-                case 5: {
-                    System.out.println("Exiting.....");
-                    break;
-                }
-                default: {
-                    System.out.println("Inside default case");
-                }
+            try (Scanner sc = new Scanner(System.in)) {
+                switch (choice) {
+                    case 1: {
+                        System.out.println("Enter the data to create Singly linked list::");
+                        int data = sc.nextInt();
+                        createSLL(data);
+                        printSLL();
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("Enter the data to insert at beginning of Singly linked list::");
+                        int data = sc.nextInt();
+                        addAtBeginning(data);
+                        printSLL();
+                        break;
+                    }
+                    case 3: {
+                        System.out.println("Enter the data to insert at end of Singly linked list::");
+                        int data = sc.nextInt();
+                        addAtEnd(data);
+                        printSLL();
+                        break;
+                    }
+                    case 4: {
+                        System.out.println("Enter at which position to add the new node:");
+                        int pos = sc.nextInt();
+                        System.out.println("Enter at data to insert:");
+                        int data = sc.nextInt();
+                        int sllSize = computeSLLSize();
+                        addatPos(pos, data, sllSize);
+                        printSLL();
+                    }
+                    case 5: {
+                        System.out.println("Exiting.....");
+                        break;
+                    }
+                    default: {
+                        System.out.println("Inside default case");
+                    }
 
+                }
             }
         } catch (Exception e) {
             System.out.println("Exception in mainMenu:: " + e);

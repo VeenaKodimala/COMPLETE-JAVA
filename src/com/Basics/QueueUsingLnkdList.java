@@ -8,50 +8,52 @@ public class QueueUsingLnkdList {
     Node rear = null;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        QueueUsingLnkdList qll = new QueueUsingLnkdList();
-        int choice;
-        do {
-            System.out.println("Enter your choice");
-            System.out.println("1. Insert an element in queue");
-            System.out.println("2. Delete an element in queue");
-            System.out.println("3. Print first element in queue");
-            System.out.println("4. Print all elements in queue");
+        try (Scanner sc = new Scanner(System.in)) {
+            QueueUsingLnkdList qll = new QueueUsingLnkdList();
+            int choice;
+            do {
+                System.out.println("Enter your choice");
+                System.out.println("1. Insert an element in queue");
+                System.out.println("2. Delete an element in queue");
+                System.out.println("3. Print first element in queue");
+                System.out.println("4. Print all elements in queue");
 
-            System.out.println("5. Exit");
-            System.out.println("Enter your choice");
-            choice = sc.nextInt();
-            qll.mainMenu(choice);
-        } while (choice != 5);
+                System.out.println("5. Exit");
+                System.out.println("Enter your choice");
+                choice = sc.nextInt();
+                qll.mainMenu(choice);
+            } while (choice != 5);
+        }
     }
 
     public void mainMenu(int choice) {
         try {
-            Scanner sc = new Scanner(System.in);
-            switch (choice) {
-                case 1: {
-                    System.out.println("Enter the data to insert");
-                    int data = sc.nextInt();
-                    enqueue(data);
-                    print();
-                    break;
-                }
-                case 2:{
-                    int data = dequeue();
-                    print();
-                    break;
-                }
-                case 3:{
-                    int peek = peek();
-                    System.out.println("First element of the queue:: "+peek);
-                    break;
-                }
-                case 4:{
-                    print();
-                    break;
-                }
-                default:{
-                    System.out.println("Wrong choice");
+            try (Scanner sc = new Scanner(System.in)) {
+                switch (choice) {
+                    case 1: {
+                        System.out.println("Enter the data to insert");
+                        int data = sc.nextInt();
+                        enqueue(data);
+                        print();
+                        break;
+                    }
+                    case 2:{
+                        dequeue();
+                        print();
+                        break;
+                    }
+                    case 3:{
+                        int peek = peek();
+                        System.out.println("First element of the queue:: "+peek);
+                        break;
+                    }
+                    case 4:{
+                        print();
+                        break;
+                    }
+                    default:{
+                        System.out.println("Wrong choice");
+                    }
                 }
             }
 

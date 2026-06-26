@@ -22,7 +22,6 @@ public class FibonacciSeries {
 
             System.out.println(n + "th Fibonacci number is:: " + b);
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("Exception:: " + e);
         }
     }
