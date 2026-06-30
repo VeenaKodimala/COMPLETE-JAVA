@@ -3,12 +3,16 @@ package com.Collections;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Queue;
 
 public class JavaIterableInterface {
-    static List<Integer> lst = new ArrayList<>();
-    public static void main(String[] args) {
-        //here, why left List and right ArrayList, because List is an interface and ArrayList is a class that implements the List interface. By using List on the left side, we can easily change the implementation to another List type (like LinkedList) in the future without changing the rest of the code. we are creating reference to interface and obj to class.
-        
+
+    public List<Integer> javaIterable(){
+        try{
+            //here, why left List and right ArrayList, because List is an interface and ArrayList is a class that implements the List interface. By using List on the left side, we can easily change the implementation to another List type (like LinkedList) in the future without changing the rest of the code. we are creating reference to interface and obj to class.
+    
+    List<Integer> lst = new ArrayList<>();
+
         lst.add(3);
         lst.add(5);
         lst.add(6);
@@ -41,11 +45,40 @@ System.out.println("Printing values using while loop");
         lst.forEach((Integer l) -> System.out.println("l::: "+l));
         //(Integer l) -> System.out.println("l::: "+l) - This is a lambda expression that takes an Integer parameter l and prints it to the console. Left side of the arrow (->) is the parameter list, and the right side is the action to be performd. We can use the parameter from left side in the right side of the arrow. The forEach() method will call this lambda expression for each element in the list, passing the current element as the argument l.
         //lambda expression is available only from java 1.8(java 8).
+        return lst;
+
+        } catch(Exception e){
+            System.err.println("Exception in javaIterable: "+e);
+            return null;
+        }
+    }
+    public static void main(String[] args) {
+            
+        //JavaIterableInterface jii = new JavaIterableInterface();
+        //List<Integer> lst = jii.javaIterable();
+//
+        //JavaCollectionInterface jci = new JavaCollectionInterface();
+        //jci.collectionMethods(lst);
+
+        CollectionsPriorityQueue cpq = new CollectionsPriorityQueue();
+        Queue<Integer> pq = cpq.priorityQueueAdd();
+
+        // cpq.priorityQueueRemove(pq);
+
+        //Queue<Integer> maxPQ = cpq.pqMaxHeap();
+        //cpq.priorityQueueRemove(maxPQ);
+
+         ComparatorVsComparable cvc = new ComparatorVsComparable();
+
+        //copyOf will make a copy of the queue and return it as a List.
+        //Creating a new object of ArrayList and passing the queue pq to it, so that we can sort the elements.
+        // cvc.comparatorDemo(new ArrayList<>(pq));
+
+        cvc.createMedicineBox();
 
 
-        JavaCollectionInterface jci = new JavaCollectionInterface();
 
-        jci.collectionMethods(lst);
+
 
 
 

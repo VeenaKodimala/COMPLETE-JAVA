@@ -1,9 +1,7 @@
 package com.Collections;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-import java.util.Vector;
 
 public class JavaCollectionInterface {
     public void collectionMethods(List<Integer> lst) {
